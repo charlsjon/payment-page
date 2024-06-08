@@ -49,3 +49,29 @@
     height: calc(10vw * 1.056);
   }
 }
+
+.crown {
+  background-image: url("/assets/img/icons/crown.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.read-more {
+  display: none;
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.content.expanded {
+  -webkit-line-clamp: initial;
+}
