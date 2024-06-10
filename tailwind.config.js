@@ -13,7 +13,12 @@ module.exports = {
         nero: '#212121',
         tealgreen: '#146758',
         offwhite: '#FAF9F6',
-        obsidian: '#0B1215'
+        obsidian: '#0B1215',
+        platinum: '#E0E0E0',
+        gravel: '#4C4C4C',
+        mist: '#959595',
+        porcelain: '#F2F2F2',
+        stardust: '#9E9E9E'
       },
       borderRadius: {
         x75: '75px'
