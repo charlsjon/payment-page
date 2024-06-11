@@ -67,14 +67,14 @@
         </ul>
       </div>
       <div class="flex">
-        <div class="flex flex-col bg-platinum rounded-l-lg py-4 px-6">
+        <div class="flex flex-col bg-platinum rounded-lg py-4 px-6" id="subscription-plan">
           <h1 class="text-lg text-obsidian">Subscription Plans</h1>
           <div class="h-full flex flex-col justify-center">
             <div class="flex gap-8">
               <div class="flex flex-col">
                 <h2 class="text-base text-gravel ms-2 mb-2">Plans:</h2>
                 <div class="flex flex-col gap-6">
-                  <div class="flex p-4 bg-mist rounded-lg items-center gap-6 hover:bg-tealgreen cursor-pointer duration-300 relative">
+                  <div class="flex p-4 bg-mist rounded-lg items-center gap-6 hover:bg-tealgreen cursor-pointer duration-300 relative plan">
                     <div class="size-9 bg-porcelain rounded-xl flex justify-center items-center">
                       <i class="fa-solid fa-calendar text-xl text-obsidian"></i>
                     </div>
@@ -86,7 +86,7 @@
                       <span class="text-offwhite text-xs">P958</span>
                     </div>
                   </div>
-                  <div class="flex p-4 bg-mist rounded-lg items-center gap-6 hover:bg-tealgreen cursor-pointer duration-300 relative">
+                  <div class="flex p-4 bg-mist rounded-lg items-center gap-6 hover:bg-tealgreen cursor-pointer duration-300 relative plan">
                     <div class="size-9 bg-porcelain rounded-xl flex justify-center items-center">
                       <i class="fa-solid fa-calendar text-xl text-obsidian"></i>
                     </div>
@@ -98,7 +98,7 @@
                       <span class="text-offwhite text-xs">P30,958</span>
                     </div>
                   </div>
-                  <div class="flex p-4 bg-mist rounded-lg items-center gap-6 hover:bg-tealgreen cursor-pointer duration-300 relative">
+                  <div class="flex p-4 bg-mist rounded-lg items-center gap-6 hover:bg-tealgreen cursor-pointer duration-300 relative plan">
                     <div class="size-9 bg-porcelain rounded-xl flex justify-center items-center">
                       <i class="fa-solid fa-file-invoice-dollar text-xl text-obsidian"></i>
                     </div>
@@ -115,105 +115,107 @@
             </div>
           </div>
         </div>
-        <div class="flex flex-col bg-nero rounded-r-lg p-4">
-          <h1 class="text-lg text-offwhite mb-4">Payment Info</h1>
-          <div class="flex flex-col">
-            <div class="flex flex-col mb-5">
-              <span class="text-xs text-stardust mb-4">Payment Method:</span>
-              <div class="flex items-center mb-4">
-                <input id="credit-card" type="radio" value="" name="default-radio" class="w-4 h-4 text-tealgreen bg-nero border-offwhite border-2 focus:ring-tealgreen focus:ring-2">
-                <label for="credit-card" class="ms-6 text-xs text-offwhite">Credit Card</label>
-              </div>
-              <div class="flex items-center">
-                <input checked id="paypal" type="radio" value="" name="default-radio" class="w-4 h-4 text-tealgreen bg-nero border-offwhite border-2 focus:ring-tealgreen focus:ring-2">
-                <label for="paypal" class="ms-6 text-xs text-offwhite">Paypal</label>
-              </div>
-            </div>
-            <div class="flex flex-col mb-5">
-              <span class="text-xs text-stardust mb-1">Name On Card:</span>
-              <input 
-              type="text" 
-              placeholder="Name"
-              class="appearance-none block w-full bg-transparent text-xs text-offwhite placeholder:text-lightgrey border border-none rounded p-1 leading-tight focus:outline-none focus:border-tealgreen focus:ring-tealgreen"
-              inputmode="email"
-              autocomplete="cc-name"
-              aria-label="Name"
-              />
-            </div>
-            <div class="flex flex-col mb-5">
-              <span class="text-xs text-stardust mb-1">Card Number:</span>
-              <input 
-              id="credit-card-input" 
-              type="text" 
-              maxlength="19" 
-              placeholder="0000 0000 0000 0000"
-              class="appearance-none block w-full bg-transparent text-xs text-offwhite placeholder:text-lightgrey border border-none rounded p-1 leading-tight focus:outline-none focus:border-tealgreen focus:ring-tealgreen"
-              inputmode="numeric"
-              autocomplete="cc-number"
-              aria-label="Credit card number"
-              />
-            </div>
-            <div class="flex mb-5 gap-2">
-              <div class="flex flex-col">
-                <span class="text-xs text-stardust mb-1">Expiration Date:</span>
-                <div class="flex gap-1">
-                  <select 
-                  id="month-selector"
-                  class="appearance-none bg-nero text-xs text-offwhite placeholder:text-lightgrey border border-none rounded p-1 leading-tight focus:outline-none focus:border-tealgreen focus:ring-tealgreen"
-                  aria-label="Month selector"
-                  >
-                    <option value="01">01</option>
-                    <option value="02">02</option>
-                    <option value="03">03</option>
-                    <option value="04">04</option>
-                    <option value="05">05</option>
-                    <option value="06">06</option>
-                    <option value="07">07</option>
-                    <option value="08">08</option>
-                    <option value="09">09</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                  </select>
-                  <select 
-                  id="year-selector"
-                  class="appearance-none bg-nero text-xs text-offwhite placeholder:text-lightgrey border border-none rounded p-1 leading-tight focus:outline-none focus:border-tealgreen focus:ring-tealgreen"
-                  aria-label="Year selector"
-                  >
-                    <option value="01">2024</option>
-                    <option value="02">2026</option>
-                    <option value="03">2027</option>
-                    <option value="04">2028</option>
-                    <option value="05">2029</option>
-                    <option value="06">2030</option>
-                    <option value="07">2031</option>
-                    <option value="08">2032</option>
-                    <option value="09">2033</option>
-                    <option value="10">2034</option>
-                    <option value="11">2035</option>
-                    <option value="12">2036</option>
-                  </select>
+        <div class="flex overflow-hidden ease-in-out duration-300" id="payment-info">
+          <div class="flex flex-col bg-nero rounded-r-lg p-4 w-60">
+            <h1 class="text-lg text-offwhite mb-4">Payment Info</h1>
+            <div class="flex flex-col">
+              <div class="flex flex-col mb-5">
+                <span class="text-xs text-stardust mb-4">Payment Method:</span>
+                <div class="flex items-center mb-4">
+                  <input id="credit-card" type="radio" value="" name="default-radio" class="w-4 h-4 text-tealgreen bg-nero border-offwhite border-2 focus:ring-tealgreen focus:ring-2">
+                  <label for="credit-card" class="ms-6 text-xs text-offwhite">Credit Card</label>
+                </div>
+                <div class="flex items-center">
+                  <input checked id="paypal" type="radio" value="" name="default-radio" class="w-4 h-4 text-tealgreen bg-nero border-offwhite border-2 focus:ring-tealgreen focus:ring-2">
+                  <label for="paypal" class="ms-6 text-xs text-offwhite">Paypal</label>
                 </div>
               </div>
-              <div class="flex flex-col">
-                <span class="text-xs text-stardust mb-1">CVV:</span>
+              <div class="flex flex-col mb-5">
+                <span class="text-xs text-stardust mb-1">Name On Card:</span>
                 <input 
-                id="cvv" 
                 type="text" 
-                maxlength="4" 
-                placeholder="000"
-                class="appearance-none w-16 bg-transparent text-xs text-offwhite placeholder:text-lightgrey border border-none rounded p-1 leading-tight focus:outline-none focus:border-tealgreen focus:ring-tealgreen"
-                inputmode="numeric"
-                autocomplete="cc-csc"
-                aria-label="Card verification value"
+                placeholder="Name"
+                class="appearance-none block w-full bg-transparent text-xs text-offwhite placeholder:text-lightgrey border border-none rounded p-1 leading-tight focus:outline-none focus:border-tealgreen focus:ring-tealgreen"
+                inputmode="email"
+                autocomplete="cc-name"
+                aria-label="Name"
                 />
               </div>
+              <div class="flex flex-col mb-5">
+                <span class="text-xs text-stardust mb-1">Card Number:</span>
+                <input 
+                id="credit-card-input" 
+                type="text" 
+                maxlength="19" 
+                placeholder="0000 0000 0000 0000"
+                class="appearance-none block w-full bg-transparent text-xs text-offwhite placeholder:text-lightgrey border border-none rounded p-1 leading-tight focus:outline-none focus:border-tealgreen focus:ring-tealgreen"
+                inputmode="numeric"
+                autocomplete="cc-number"
+                aria-label="Credit card number"
+                />
+              </div>
+              <div class="flex mb-5 gap-2">
+                <div class="flex flex-col">
+                  <span class="text-xs text-stardust mb-1">Expiration Date:</span>
+                  <div class="flex gap-1">
+                    <select 
+                    id="month-selector"
+                    class="appearance-none bg-nero text-xs text-offwhite placeholder:text-lightgrey border border-none rounded p-1 leading-tight focus:outline-none focus:border-tealgreen focus:ring-tealgreen"
+                    aria-label="Month selector"
+                    >
+                      <option value="01">01</option>
+                      <option value="02">02</option>
+                      <option value="03">03</option>
+                      <option value="04">04</option>
+                      <option value="05">05</option>
+                      <option value="06">06</option>
+                      <option value="07">07</option>
+                      <option value="08">08</option>
+                      <option value="09">09</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                    </select>
+                    <select 
+                    id="year-selector"
+                    class="appearance-none bg-nero text-xs text-offwhite placeholder:text-lightgrey border border-none rounded p-1 leading-tight focus:outline-none focus:border-tealgreen focus:ring-tealgreen"
+                    aria-label="Year selector"
+                    >
+                      <option value="01">2024</option>
+                      <option value="02">2026</option>
+                      <option value="03">2027</option>
+                      <option value="04">2028</option>
+                      <option value="05">2029</option>
+                      <option value="06">2030</option>
+                      <option value="07">2031</option>
+                      <option value="08">2032</option>
+                      <option value="09">2033</option>
+                      <option value="10">2034</option>
+                      <option value="11">2035</option>
+                      <option value="12">2036</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-xs text-stardust mb-1">CVV:</span>
+                  <input 
+                  id="cvv" 
+                  type="text" 
+                  maxlength="4" 
+                  placeholder="000"
+                  class="appearance-none w-16 bg-transparent text-xs text-offwhite placeholder:text-lightgrey border border-none rounded p-1 leading-tight focus:outline-none focus:border-tealgreen focus:ring-tealgreen"
+                  inputmode="numeric"
+                  autocomplete="cc-csc"
+                  aria-label="Card verification value"
+                  />
+                </div>
+              </div>
+              <div class="flex justify-end mb-5">
+                <span class="text-offwhite text-xs font-semibold me-4">Total:</span>
+                <span class="text-offwhite text-xs font-semibold">P300,958</span>
+              </div>
+              <button type="button" class="block focus:outline-none text-offwhite bg-tealgreen hover:bg-green-800 focus:ring-2 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5">CHECKOUT</button>
             </div>
-            <div class="flex justify-end mb-5">
-              <span class="text-offwhite text-xs font-semibold me-4">Total:</span>
-              <span class="text-offwhite text-xs font-semibold">P300,958</span>
-            </div>
-            <button type="button" class="block focus:outline-none text-offwhite bg-tealgreen hover:bg-green-800 focus:ring-2 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5">CHECKOUT</button>
           </div>
         </div>  
       </div>

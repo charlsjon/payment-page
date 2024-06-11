@@ -75,3 +75,7 @@
 .content.expanded {
   -webkit-line-clamp: initial;
 }
+
+#payment-info {
+  width: 0px;
+}
