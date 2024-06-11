@@ -73,14 +73,32 @@
             <div class="flex gap-8">
               <div class="flex flex-col">
                 <h2 class="text-base text-gravel ms-2 mb-2">Plans:</h2>
-                <div class="flex flex-col gap-8">
+                <div class="flex flex-col gap-6">
                   <div class="flex p-4 bg-mist rounded-lg items-center gap-6 hover:bg-tealgreen cursor-pointer duration-300">
                     <div class="size-9 bg-porcelain rounded-xl flex justify-center items-center">
-                      <i class="fa-regular fa-calendar text-xl text-obsidian"></i>
+                      <i class="fa-solid fa-calendar text-xl text-obsidian"></i>
                     </div>
                     <div class="flex flex-col">
                       <span class="text-offwhite text-sm font-semibold">Monthly</span>
                       <p class="text-xs text-offwhite">Enjoy your subscription for a whole month</p>
+                    </div>
+                  </div>
+                  <div class="flex p-4 bg-mist rounded-lg items-center gap-6 hover:bg-tealgreen cursor-pointer duration-300">
+                    <div class="size-9 bg-porcelain rounded-xl flex justify-center items-center">
+                      <i class="fa-solid fa-calendar text-xl text-obsidian"></i>
+                    </div>
+                    <div class="flex flex-col">
+                      <span class="text-offwhite text-sm font-semibold">Annually</span>
+                      <p class="text-xs text-offwhite">Enjoy your subscription for a whole year</p>
+                    </div>
+                  </div>
+                  <div class="flex p-4 bg-mist rounded-lg items-center gap-6 hover:bg-tealgreen cursor-pointer duration-300">
+                    <div class="size-9 bg-porcelain rounded-xl flex justify-center items-center">
+                      <i class="fa-solid fa-file-invoice-dollar text-xl text-obsidian"></i>
+                    </div>
+                    <div class="flex flex-col">
+                      <span class="text-offwhite text-sm font-semibold">One Time Pay</span>
+                      <p class="text-xs text-offwhite">Enjoy for lifetime</p>
                     </div>
                   </div>
                 </div>
@@ -103,38 +121,28 @@
               </div>
             </div>
             <div class="flex flex-col mb-8">
-              <span class="text-xs text-stardust mb-4">Name On Card:</span>
-              <span class="text-xs text-offwhite">John Doe</span>
+              <span class="text-xs text-stardust mb-1">Name On Card:</span>
+              <input 
+              type="text" 
+              placeholder="Name"
+              class="appearance-none block w-full bg-transparent text-xs text-offwhite placeholder:text-lightgrey border border-none rounded p-1 mb-3 leading-tight focus:outline-none focus:border-tealgreen focus:ring-tealgreen"
+              inputmode="email"
+              autocomplete="cc-name"
+              aria-label="Name"
+          />
             </div>
             <div class="flex flex-col">
-              <span class="text-xs text-stardust mb-4">Card Number:</span>
-              <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-                <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="credit-card">
-                        Credit Card Number
-                    </label>
-                    <input 
-                    id="credit-card-input" 
-                    type="text" 
-                    maxlength="19" 
-                    placeholder="0000 0000 0000 0000"
-                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-indigo-500"
-                    inputmode="numeric"
-                    autocomplete="cc-number"
-                    aria-label="Credit card number"
-                />
-                    <p class="text-red-500 text-xs italic" id="error-message"></p>
-                </div>
-                <div class="flex items-center justify-between">
-                    <button 
-                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" 
-                        type="button"
-                        onclick="validateCardNumber()"
-                    >
-                        Validate
-                    </button>
-                </div>
-            </form>
+              <span class="text-xs text-stardust mb-1">Card Number:</span>
+              <input 
+              id="credit-card-input" 
+              type="text" 
+              maxlength="19" 
+              placeholder="0000 0000 0000 0000"
+              class="appearance-none block w-full bg-transparent text-xs text-offwhite placeholder:text-lightgrey border border-none rounded p-1 mb-3 leading-tight focus:outline-none focus:border-tealgreen focus:ring-tealgreen"
+              inputmode="numeric"
+              autocomplete="cc-number"
+              aria-label="Credit card number"
+          />
             </div>
           </div>
         </div>  

@@ -18,7 +18,8 @@ module.exports = {
         gravel: '#4C4C4C',
         mist: '#959595',
         porcelain: '#F2F2F2',
-        stardust: '#9E9E9E'
+        stardust: '#9E9E9E',
+        lightgrey: '#D9D9D9'
       },
       borderRadius: {
         x75: '75px'
