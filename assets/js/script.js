@@ -49,3 +49,30 @@ input.addEventListener("paste", (event) => {
     const pastedData = event.clipboardData.getData("text").replace(/\D/g, ""); // Get only numbers from paste
     document.execCommand("insertText", false, pastedData); // Insert only numeric data
 });
+
+const cvvInput = document.getElementById('cvv');
+
+// Allow only numerical input and limit length
+cvvInput.addEventListener('input', function (event) {
+    const value = this.value.replace(/\D/g, ''); // Remove non-numeric characters
+    if (value.length <= 4) { // CVV typically has a maximum of 4 digits
+        this.value = value;
+    } else {
+        this.value = value.slice(0, 4);
+    }
+});
+
+// Prevent non-numeric input
+cvvInput.addEventListener('keydown', function (event) {
+    const key = event.key;
+    if (!/^\d$/.test(key) && !['Backspace', 'ArrowLeft', 'ArrowRight', 'Delete'].includes(key)) {
+        event.preventDefault();
+    }
+});
+
+// Handle paste event to allow only numbers
+cvvInput.addEventListener('paste', function (event) {
+    event.preventDefault();
+    const pastedData = event.clipboardData.getData('text').replace(/\D/g, ''); // Get only numbers from paste
+    document.execCommand('insertText', false, pastedData.slice(0, 4)); // Insert only numeric data up to 4 digits
+});
