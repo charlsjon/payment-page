@@ -8,10 +8,10 @@
   <link rel="stylesheet" href="/public/styles.css">
 </head>
 <body>
-  <main class="w-full h-dvh relative justify-center items-center flex">
-    <div class="absolute top-0 right-0 wave-right"></div>
-    <div class="absolute bottom-0 left-0 wave-left"></div>
-    <div class="w-full gap-8 flex items-center justify-center">
+  <main class="w-full h-dvh max-md:h-full relative justify-center max-lg:items-center flex overflow-auto">
+    <div class="absolute top-0 right-0 wave-right -z-10"></div>
+    <div class="absolute bottom-0 left-0 wave-left -z-10"></div>
+    <div class="w-full gap-8 p-4 flex items-center justify-center max-md:flex-col">
       <div class="w-full max-w-sm p-2 bg-nero rounded-lg shadow sm:p-4 relative overflow-hidden">
         <div class="absolute -top-8 -right-11 h-24 w-32 bg-tealgreen rounded-x75"></div>
         <div class="crown size-9"></div>
@@ -102,9 +102,39 @@
                 <label for="paypal" class="ms-6 text-xs text-offwhite">Paypal</label>
               </div>
             </div>
-            <div class="flex flex-col">
+            <div class="flex flex-col mb-8">
               <span class="text-xs text-stardust mb-4">Name On Card:</span>
               <span class="text-xs text-offwhite">John Doe</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-xs text-stardust mb-4">Card Number:</span>
+              <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="credit-card">
+                        Credit Card Number
+                    </label>
+                    <input 
+                    id="credit-card-input" 
+                    type="text" 
+                    maxlength="19" 
+                    placeholder="0000 0000 0000 0000"
+                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-indigo-500"
+                    inputmode="numeric"
+                    autocomplete="cc-number"
+                    aria-label="Credit card number"
+                />
+                    <p class="text-red-500 text-xs italic" id="error-message"></p>
+                </div>
+                <div class="flex items-center justify-between">
+                    <button 
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" 
+                        type="button"
+                        onclick="validateCardNumber()"
+                    >
+                        Validate
+                    </button>
+                </div>
+            </form>
             </div>
           </div>
         </div>  
