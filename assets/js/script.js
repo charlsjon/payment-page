@@ -29,7 +29,7 @@ const formatNumber = (number) => number.split("").reduce((acc, char, index) => {
 }, "");
 
 input.addEventListener("input", () => {
-    input.value = formatNumber(input.value.replace(/\D/g, "")); // Replace non-numeric characters
+    input.value = formatNumber(input.value.replace(/\D/g, ""));
 });
 
 input.addEventListener("keydown", (event) => {
@@ -49,10 +49,10 @@ const cvvInput = document.getElementById('cvv');
 
 cvvInput.addEventListener('input', function (event) {
     const value = this.value.replace(/\D/g, ''); 
-    if (value.length <= 4) {
+    if (value.length <= 3) {
         this.value = value;
     } else {
-        this.value = value.slice(0, 4);
+        this.value = value.slice(0, 3);
     }
 });
 
@@ -65,8 +65,8 @@ cvvInput.addEventListener('keydown', function (event) {
 
 cvvInput.addEventListener('paste', function (event) {
     event.preventDefault();
-    const pastedData = event.clipboardData.getData('text').replace(/\D/g, ''); // Get only numbers from paste
-    document.execCommand('insertText', false, pastedData.slice(0, 4)); // Insert only numeric data up to 4 digits
+    const pastedData = event.clipboardData.getData('text').replace(/\D/g, '');
+    document.execCommand('insertText', false, pastedData.slice(0, 3));
 });
 
 let plans = document.getElementsByClassName('plan');
