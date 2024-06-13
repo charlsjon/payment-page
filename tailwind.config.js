@@ -27,6 +27,9 @@ module.exports = {
       height: {
         '100': '28rem',
         'unset': 'unset'
+      },
+      dropShadow: {
+        'custom-nero': '2px 4px 6px #212121',
       }
     },
   },
