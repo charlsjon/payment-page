@@ -1756,6 +1756,21 @@ input:checked + .toggle-bg {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.drop-shadow-md {
+  --tw-drop-shadow: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.drop-shadow-lg {
+  --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.drop-shadow-xl {
+  --tw-drop-shadow: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
@@ -1929,6 +1944,11 @@ input:checked + .toggle-bg {
   color: rgb(217 217 217 / var(--tw-text-opacity));
 }
 
+.focus-within\:text-tealgreen:focus-within {
+  --tw-text-opacity: 1;
+  color: rgb(20 103 88 / var(--tw-text-opacity));
+}
+
 .hover\:border-gray-300:hover {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
@@ -1974,9 +1994,19 @@ input:checked + .toggle-bg {
   color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
+.hover\:text-tealgreen:hover {
+  --tw-text-opacity: 1;
+  color: rgb(20 103 88 / var(--tw-text-opacity));
+}
+
 .focus\:border-tealgreen:focus {
   --tw-border-opacity: 1;
   border-color: rgb(20 103 88 / var(--tw-border-opacity));
+}
+
+.focus\:text-tealgreen:focus {
+  --tw-text-opacity: 1;
+  color: rgb(20 103 88 / var(--tw-text-opacity));
 }
 
 .focus\:outline-none:focus {
@@ -2014,6 +2044,11 @@ input:checked + .toggle-bg {
 .focus\:ring-tealgreen:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(20 103 88 / var(--tw-ring-opacity));
+}
+
+.active\:text-tealgreen:active {
+  --tw-text-opacity: 1;
+  color: rgb(20 103 88 / var(--tw-text-opacity));
 }
 
 .dark\:border-blue-500:is(.dark *) {
