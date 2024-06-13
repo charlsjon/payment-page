@@ -90,7 +90,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .add-width {
     width: 240px;
   }
