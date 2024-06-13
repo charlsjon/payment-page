@@ -23,6 +23,9 @@ module.exports = {
       },
       borderRadius: {
         x75: '75px'
+      },
+      height: {
+        '100': '28rem',
       }
     },
   },

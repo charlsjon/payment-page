@@ -76,6 +76,33 @@
   -webkit-line-clamp: initial;
 }
 
-#payment-info {
+.payment-info {
   width: 0px;
 }
+
+.add-width {
+  width: 240px;
+}
+
+@media (max-width: 1024px) {
+  .add-width {
+    width: unset;
+  }
+}
+
+@media (min-width: 768px) {
+  .add-width {
+    width: 240px;
+  }
+}
+
+/* @media (max-width: 768px) {
+  .payment-info {
+    height: 0px;
+    width: 100%;
+  }
+  .add-width {
+    height: 100%;
+    width: unset;
+  }
+} */

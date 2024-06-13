@@ -84,11 +84,12 @@ function handlePlanClick(event) {
 
     event.currentTarget.classList.add('select');
     event.currentTarget.classList.add('bg-tealgreen');
-    const paymentInfo = document.getElementById('payment-info');
+    const paymentInfo = document.querySelector('.payment-info');
     const subscriptionPlan = document.getElementById('subscription-plan');
 
     if(plan.classList.contains('select')) {
-      paymentInfo.style.width = "240px"
+      console.log(paymentInfo)
+      paymentInfo.classList.add('add-width');
       subscriptionPlan.classList.remove('rounded-lg');
       subscriptionPlan.classList.add('rounded-l-lg');
     }
