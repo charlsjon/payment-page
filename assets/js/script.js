@@ -88,10 +88,9 @@ function handlePlanClick(event) {
     const subscriptionPlan = document.getElementById('subscription-plan');
 
     if(plan.classList.contains('select')) {
-      console.log(paymentInfo)
-      paymentInfo.classList.add('add-width');
+      paymentInfo.classList.add('add-proportion');
       subscriptionPlan.classList.remove('rounded-lg');
-      subscriptionPlan.classList.add('rounded-l-lg');
+      subscriptionPlan.classList.add('border-radius-sp');
     }
   }
 }

@@ -26,6 +26,7 @@ module.exports = {
       },
       height: {
         '100': '28rem',
+        'unset': 'unset'
       }
     },
   },

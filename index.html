@@ -11,7 +11,7 @@
   <main class="w-full h-dvh max-lg:h-full relative justify-center max- lg:items-center flex overflow-auto">
     <div class="absolute top-0 right-0 wave-right -z-10"></div>
     <div class="absolute bottom-0 left-0 wave-left -z-10"></div>
-    <div class="w-full gap-8 p-4 flex items-center justify-center max-lg:flex-col">
+    <div class="w-full gap-8 p-4 flex items-center lg:justify-center max-lg:flex-col">
       <div class="w-full max-w-sm p-2 bg-nero rounded-lg shadow sm:p-4 relative overflow-hidden">
         <div class="absolute -top-8 -right-11 h-24 w-32 bg-tealgreen rounded-x75"></div>
         <div class="crown size-9"></div>
@@ -66,9 +66,9 @@
           </li>
         </ul>
       </div>
-      <div class="h-100 flex max-sm:h-full">
-        <div class="h-full flex">
-          <div class="h-full w-full flex flex-col bg-platinum rounded-lg py-4 px-6 min-md:rounded-lg" id="subscription-plan">
+      <div class="h-100 flex max-sm:h-unset max-sm:flex-col max-sm:gap-4">
+        <div class="h-full flex max-sm:h-100">
+          <div class="h-full w-full flex flex-col bg-platinum py-4 px-6 rounded-lg" id="subscription-plan">
             <h1 class="text-lg text-obsidian">Subscription Plans</h1>
             <div class="h-full flex flex-col justify-center">
               <div class="flex gap-8">
@@ -118,7 +118,7 @@
           </div>
         </div>
         <div class="h-full flex overflow-hidden ease-in-out duration-300 payment-info ">
-          <div class="w-full flex flex-col justify-between bg-nero rounded-r-lg p-4 min-md:rounded-lg">
+          <div class="w-full flex flex-col justify-between bg-nero p-4 border-radius-si">
             <h1 class="text-lg text-offwhite mb-4">Payment Info</h1>
             <div class="flex flex-col">
               <div class="flex flex-col mb-5">
@@ -222,10 +222,6 @@
         </div>  
       </div>
     </div>
-
-
-
-
   </main>
   <script src="node_modules/flowbite/dist/flowbite.js"></script>   
 </body>
