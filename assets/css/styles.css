@@ -156,7 +156,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #146758;
+  @apply bg-tealgreen;
   border-radius: 12px;
 }
 
