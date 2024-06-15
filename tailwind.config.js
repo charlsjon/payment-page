@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{html,js}",
-    "./assets/js/**/*js",
+    "./templates/**/*.html",
+    "./assets/js/**/*.js",
     "./index.html",
-    "./node_modules/flowbite/**/*js"
+    "./node_modules/flowbite/**/*.js"
   ],
   theme: {
     extend: {
@@ -19,18 +19,26 @@ module.exports = {
         mist: '#959595',
         porcelain: '#F2F2F2',
         stardust: '#9E9E9E',
-        lightgrey: '#D9D9D9'
+        lightgrey: '#D9D9D9',
+        zircon: '#F6F8FF'
+      },
+      rotate: {
+        '10': '10deg'
       },
       borderRadius: {
         x75: '75px'
       },
       height: {
         '100': '28rem',
+        '400': '48rem',
         'unset': 'unset'
+      },
+      width: {
+        '1000': '128rem',
       },
       dropShadow: {
         'custom-nero': '2px 4px 6px #212121',
-      }
+      },
     },
   },
   plugins: [
