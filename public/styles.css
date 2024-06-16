@@ -1316,10 +1316,6 @@ input:checked + .toggle-bg {
   width: 16rem;
 }
 
-.w-72 {
-  width: 18rem;
-}
-
 .w-full {
   width: 100%;
 }
@@ -2057,6 +2053,17 @@ input:checked + .toggle-bg {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.search-bar {
+  width: 2.5rem;
+}
+
+.expanded {
+  width: 18rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(33 33 33 / var(--tw-border-opacity));
 }
 
 ::-webkit-scrollbar {
