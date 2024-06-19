@@ -1160,6 +1160,11 @@ input:checked + .toggle-bg {
   margin-right: 0.5rem;
 }
 
+.mx-8 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
 .my-16 {
   margin-top: 4rem;
   margin-bottom: 4rem;
@@ -1394,6 +1399,10 @@ input:checked + .toggle-bg {
 
 .resize {
   resize: both;
+}
+
+.list-disc {
+  list-style-type: disc;
 }
 
 .appearance-none {
@@ -2095,6 +2104,11 @@ input:checked + .toggle-bg {
   background: #105548;
   -webkit-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
+}
+
+.highlight {
+  --tw-bg-opacity: 1;
+  background-color: rgb(94 255 226 / var(--tw-bg-opacity));
 }
 
 .placeholder\:text-lightgrey::-moz-placeholder {

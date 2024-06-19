@@ -20,7 +20,8 @@ module.exports = {
         porcelain: '#F2F2F2',
         stardust: '#9E9E9E',
         lightgrey: '#D9D9D9',
-        zircon: '#F6F8FF'
+        zircon: '#F6F8FF',
+        aquamarine: '#5EFFE2'
       },
       rotate: {
         '10': '10deg'

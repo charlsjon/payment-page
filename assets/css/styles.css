@@ -178,3 +178,7 @@
   background: #105548;
   transition: background-color 0.3s ease-in-out;
 }
+
+.highlight {
+  @apply bg-aquamarine
+}
