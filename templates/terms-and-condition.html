@@ -17,9 +17,16 @@
             <div class="zumumu-icon"></div>
             <h1 class="text-obsidian text-2xl mt-8">Terms and Condition</h1>
             <div class="relative h-full flex">              
-              <div class="flex absolute right-0 top-2/4 translate-x-0 -translate-y-2/4 items-center cursor-pointer group rounded-full hover:border-tealgreen duration-300 focus-within:border-tealgreen search-bar" id="search-bar">
-                <i class="fa-solid fa-magnifying-glass text-2xl mx-2 text-obsidian group-hover:text-tealgreen group-focus-within:text-tealgreen duration-300" id="search"></i>
-                <input class="w-full flex bg-transparent border-none outline-none focus:border-none focus:outline-none focus:ring-0" type="text" placeholder="Search..." id="search-input">
+              <div class="flex absolute right-0 top-2/4 translate-x-0 -translate-y-2/4 cursor-pointer group rounded-full hover:border-tealgreen duration-300 focus-within:border-tealgreen search-bar" id="search-bar">
+								<div class="w-full flex relative items-center">
+									<i class="fa-solid fa-magnifying-glass text-2xl mx-2 text-obsidian group-hover:text-tealgreen group-focus-within:text-tealgreen duration-300" id="search"></i>
+									<input class="w-full flex bg-transparent border-none outline-none focus:border-none focus:outline-none focus:ring-0" type="text" placeholder="Search..." id="search-input">
+									<div class="absolute -bottom-2 w-28 hidden justify-around items-center left-2/4 -translate-x-2/4 translate-y-full" id="find-counter">
+										<i class="fa-solid fa-angle-left text-tealgreen text-xl cursor-pointer" id="prev-highlight"></i>
+										<span class="text-xs text-tealgreen" id="highlight-count">0 of 0</span>
+										<i class="fa-solid fa-angle-right text-tealgreen text-xl cursor-pointer" id="next-highlight"></i>
+									</div>
+								</div>
               </div>
             </div>
           </div>
