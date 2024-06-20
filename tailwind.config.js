@@ -21,7 +21,8 @@ module.exports = {
         stardust: '#9E9E9E',
         lightgrey: '#D9D9D9',
         zircon: '#F6F8FF',
-        aquamarine: '#5EFFE2'
+        aquamarine: '#5EFFE2',
+        bluehosta: '#6FC5B6'
       },
       rotate: {
         '10': '10deg'

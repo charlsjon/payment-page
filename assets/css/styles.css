@@ -182,3 +182,7 @@
 .highlight {
   @apply bg-aquamarine
 }
+
+.highlight.focused {
+  @apply bg-orange-300
+}

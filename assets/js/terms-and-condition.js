@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
     highlightedElements.forEach(el => {
       const parent = el.parentNode;
       parent.replaceChild(document.createTextNode(el.textContent), el);
-      parent.normalize(); // Merge adjacent text nodes
+      parent.normalize();
     });
     highlights = [];
     currentIndex = -1;
@@ -148,6 +148,15 @@ document.addEventListener('DOMContentLoaded', ()=> {
     if (highlights.length === 0) return;
 
     currentIndex = (index + highlights.length) % highlights.length;
+
+    highlights.forEach((highlight, i) => {
+      if (i === currentIndex) {
+        highlight.classList.add('focused');
+      } else {
+        highlight.classList.remove('focused');
+      }
+    });
+
     const highlightElement = highlights[currentIndex];
     highlightElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
     highlightCount.textContent = `${currentIndex + 1} of ${highlights.length}`;
