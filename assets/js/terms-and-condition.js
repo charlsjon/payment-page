@@ -57,76 +57,124 @@ document.addEventListener('DOMContentLoaded', ()=> {
   let highlights = [];
   let currentIndex = -1;
 
-  // Function to remove old highlights
+  // Function to remove all highlights
   function removeHighlights() {
-      const highlightedElements = articleContent.querySelectorAll('.highlight');
-      highlightedElements.forEach(element => {
-          const parent = element.parentNode;
-          parent.replaceChild(document.createTextNode(element.textContent), element);
-          parent.normalize(); // Combine adjacent text nodes
-      });
-      highlights = [];
-      currentIndex = -1;
+    const highlightedElements = document.querySelectorAll('.highlight');
+    highlightedElements.forEach(el => {
+      const parent = el.parentNode;
+      parent.replaceChild(document.createTextNode(el.textContent), el);
+      parent.normalize(); // Merge adjacent text nodes
+    });
+    highlights = [];
+    currentIndex = -1;
   }
 
-  // Function to add new highlights and return all highlighted elements
+  // Function to highlight text
   function highlightText(text) {
-      if (!text) return [];
+    if (!text) return [];
 
-      const regex = new RegExp(`(${text})`, 'gi');
-      traverseDOM(articleContent, node => {
-          if (node.nodeType === Node.TEXT_NODE) {
-              const matches = node.data.match(regex);
-              if (matches) {
-                  const newNode = document.createElement('span');
-                  newNode.innerHTML = node.data.replace(regex, '<span class="highlight">$1</span>');
-                  const highlightNodes = Array.from(newNode.childNodes);
-                  node.replaceWith(...highlightNodes);
-                  highlights.push(...highlightNodes.filter(node => node.className === 'highlight'));
-              }
-          }
-      });
+    const regex = new RegExp(`(${text})`, 'gi');
+    const nodes = Array.from(articleContent.childNodes);
 
-      return highlights;
+    nodes.forEach(node => {
+      if (node.nodeType === Node.TEXT_NODE) {
+        const matches = [...node.data.matchAll(regex)];
+        if (matches.length > 0) {
+          const parent = node.parentNode;
+          const docFrag = document.createDocumentFragment();
+          let lastIndex = 0;
+
+          matches.forEach(match => {
+            const span = document.createElement('span');
+            span.classList.add('highlight');
+            span.textContent = match[1];
+
+            const textBefore = node.data.slice(lastIndex, match.index);
+            docFrag.appendChild(document.createTextNode(textBefore));
+            docFrag.appendChild(span);
+
+            lastIndex = match.index + match[1].length;
+            highlights.push(span);
+          });
+
+          const textAfter = node.data.slice(lastIndex);
+          docFrag.appendChild(document.createTextNode(textAfter));
+          parent.replaceChild(docFrag, node);
+        }
+      } else if (node.nodeType === Node.ELEMENT_NODE && !node.classList.contains('highlight')) {
+        highlightTextRecursive(node, regex);
+      }
+    });
+
+    return highlights;
   }
 
-  // Function to traverse DOM and apply a callback to each text node
-  function traverseDOM(node, callback) {
-      const walker = document.createTreeWalker(node, NodeFilter.SHOW_TEXT, null, false);
-      let currentNode;
-      while (currentNode = walker.nextNode()) {
-          callback(currentNode);
+  function highlightTextRecursive(element, regex) {
+    const childNodes = Array.from(element.childNodes);
+
+    childNodes.forEach(child => {
+      if (child.nodeType === Node.TEXT_NODE) {
+        const matches = [...child.data.matchAll(regex)];
+        if (matches.length > 0) {
+          const parent = child.parentNode;
+          const docFrag = document.createDocumentFragment();
+          let lastIndex = 0;
+
+          matches.forEach(match => {
+            const span = document.createElement('span');
+            span.classList.add('highlight');
+            span.textContent = match[1];
+
+            const textBefore = child.data.slice(lastIndex, match.index);
+            docFrag.appendChild(document.createTextNode(textBefore));
+            docFrag.appendChild(span);
+
+            lastIndex = match.index + match[1].length;
+            highlights.push(span);
+          });
+
+          const textAfter = child.data.slice(lastIndex);
+          docFrag.appendChild(document.createTextNode(textAfter));
+          parent.replaceChild(docFrag, child);
+        }
+      } else if (child.nodeType === Node.ELEMENT_NODE && !child.classList.contains('highlight')) {
+        highlightTextRecursive(child, regex);
       }
+    });
   }
 
   // Function to scroll to a specific highlight
   function scrollToHighlight(index) {
-      if (highlights.length === 0) return;
+    if (highlights.length === 0) return;
 
-      currentIndex = (index + highlights.length) % highlights.length;
-      highlights[currentIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
-      highlightCount.textContent = `${currentIndex + 1} of ${highlights.length}`;
+    currentIndex = (index + highlights.length) % highlights.length;
+    const highlightElement = highlights[currentIndex];
+    highlightElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    highlightCount.textContent = `${currentIndex + 1} of ${highlights.length}`;
   }
 
-  // Search event listener
+  // Search input event listener
   searchInput.addEventListener('input', function () {
-      const query = this.value.trim();
-      removeHighlights();
+    const query = this.value.trim();
+    removeHighlights();
 
-      if (query.length > 0) {
-          highlightText(query);
-          scrollToHighlight(0);
-      } else {
-          highlightCount.textContent = `0 of 0`;
+    if (query.length > 0) {
+      highlightText(query);
+      if (highlights.length > 0) {
+        scrollToHighlight(0);
       }
+      highlightCount.textContent = `${highlights.length > 0 ? 1 : 0} of ${highlights.length}`;
+    } else {
+      highlightCount.textContent = `0 of 0`;
+    }
   });
 
   // Navigation buttons event listeners
   prevButton.addEventListener('click', function () {
-      scrollToHighlight(currentIndex - 1);
+    scrollToHighlight(currentIndex - 1);
   });
 
   nextButton.addEventListener('click', function () {
-      scrollToHighlight(currentIndex + 1);
+    scrollToHighlight(currentIndex + 1);
   });
 })
