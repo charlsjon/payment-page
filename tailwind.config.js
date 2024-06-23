@@ -33,6 +33,7 @@ module.exports = {
       height: {
         '100': '28rem',
         '400': '48rem',
+        'halfscreen': '50vh',
         'unset': 'unset'
       },
       width: {
