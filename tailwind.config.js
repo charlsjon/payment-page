@@ -32,6 +32,7 @@ module.exports = {
       },
       height: {
         '100': '28rem',
+        '300': '35rem',
         '400': '48rem',
         'halfscreen': '50dvh',
         'unset': 'unset'

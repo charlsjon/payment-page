@@ -188,5 +188,5 @@
 }
 
 .halfscreen {
-  height: clamp(30vh, 20rem, 50vh);
+  height: clamp(30dvh, 12rem, 50dvh);
 }
