@@ -1301,7 +1301,7 @@ input:checked + .toggle-bg {
 }
 
 .h-halfscreen {
-  height: 50vh;
+  height: 50dvh;
 }
 
 .w-1\/2 {
@@ -1722,6 +1722,11 @@ input:checked + .toggle-bg {
   padding-right: 1.5rem;
 }
 
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -1740,11 +1745,6 @@ input:checked + .toggle-bg {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 
 .pt-2 {
@@ -2153,6 +2153,10 @@ input:checked + .toggle-bg {
   background-color: rgb(253 186 140 / var(--tw-bg-opacity));
 }
 
+.halfscreen {
+  height: clamp(30vh, 20rem, 50vh);
+}
+
 .placeholder\:text-lightgrey::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(217 217 217 / var(--tw-text-opacity));
@@ -2447,13 +2451,6 @@ input:checked + .toggle-bg {
 
   .max-sm\:gap-4 {
     gap: 1rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .md\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
   }
 }
 

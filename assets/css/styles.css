@@ -186,3 +186,7 @@
 .highlight.focused {
   @apply bg-orange-300
 }
+
+.halfscreen {
+  height: clamp(30vh, 20rem, 50vh);
+}
