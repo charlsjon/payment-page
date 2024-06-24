@@ -6,22 +6,21 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   function isValidEmail(email) {
-      return emailRegex.test(email);
+    return emailRegex.test(email);
   }
 
   function verifyEmail() {
     const emailValue = email.value;
     const confirmEmailValue = confirmEmail.value;
 
-    if (isValidEmail(emailValue) && emailValue === confirmEmailValue) {
-      submitButton.removeAttribute("disabled")
-    } else {
+    if (!isValidEmail(emailValue) || !isValidEmail(confirmEmailValue) || emailValue !== confirmEmailValue) {
       submitButton.disabled = true;
-      submitButton.setAttribute("disabled", "disabled")
+      submitButton.setAttribute("disabled", true)
+      return
     }
+    submitButton.removeAttribute("disabled")
   }
 
-  // Add event listeners to both input fields
   email.addEventListener('input', verifyEmail);
   confirmEmail.addEventListener('input', verifyEmail);
 });
