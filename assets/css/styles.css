@@ -205,3 +205,12 @@
     height: clamp(30dvh, 29rem, 50dvh);
   }
 }
+
+.envelope {
+  background-image: url("/assets/img/icons/message.svg");
+  width: 62px;
+  height: 59px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

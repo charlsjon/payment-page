@@ -12,7 +12,7 @@ module.exports = {
         seashell: '#F0F0F0',
         nero: '#212121',
         tealgreen: '#146758',
-        offwhite: '#FAF9F6',
+        offwhite: '#FAF9F6',       
         obsidian: '#0B1215',
         platinum: '#E0E0E0',
         gravel: '#4C4C4C',
@@ -20,6 +20,7 @@ module.exports = {
         porcelain: '#F2F2F2',
         stardust: '#9E9E9E',
         lightgrey: '#D9D9D9',
+        mediumgrey: '#7D7E84',
         zircon: '#F6F8FF',
         aquamarine: '#5EFFE2',
         bluehosta: '#6FC5B6'
