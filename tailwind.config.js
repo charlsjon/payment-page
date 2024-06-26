@@ -23,7 +23,8 @@ module.exports = {
         mediumgrey: '#7D7E84',
         zircon: '#F6F8FF',
         aquamarine: '#5EFFE2',
-        bluehosta: '#6FC5B6'
+        bluehosta: '#6FC5B6',
+        charcoalgrey: '#3F3F3F'
       },
       rotate: {
         '10': '10deg'
@@ -39,6 +40,7 @@ module.exports = {
         'unset': 'unset'
       },
       width: {
+        'unset': 'unset',
         '1000': '128rem',
       },
       dropShadow: {

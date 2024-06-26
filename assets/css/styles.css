@@ -214,3 +214,19 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+@media (min-width: 640px) {
+  .envelope {
+    width: 137px;
+    height: 134px;
+  }  
+}
+
+.zumumu-icon-white {
+  background-image: url("/assets/img/icons/zumumu-logo-white.svg");
+  width: 97px;
+  height: 47.11px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
