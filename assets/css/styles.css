@@ -253,9 +253,16 @@
   background-size: cover;
 }
 
-/* @media (max-width: 639px) {
-  .animated-background-wave {
+.animated-background-wave-nosm {
+  background-image: url("/assets/img/background/animated-wave.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 639px) {
+  .animated-background-wave-nosm {
     background-image: unset;
     @apply bg-zircon
   }
-} */
+}

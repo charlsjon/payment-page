@@ -2257,12 +2257,20 @@ input:checked + .toggle-bg {
   background-size: cover;
 }
 
-/* @media (max-width: 639px) {
-  .animated-background-wave {
+.animated-background-wave-nosm {
+  background-image: url("/assets/img/background/animated-wave.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 639px) {
+  .animated-background-wave-nosm {
     background-image: unset;
-    @apply bg-zircon
+    --tw-bg-opacity: 1;
+    background-color: rgb(246 248 255 / var(--tw-bg-opacity))
   }
-} */
+}
 
 .placeholder\:text-center::-moz-placeholder {
   text-align: center;
@@ -2607,6 +2615,11 @@ input:checked + .toggle-bg {
 
   .max-sm\:gap-4 {
     gap: 1rem;
+  }
+
+  .max-sm\:bg-zircon {
+    --tw-bg-opacity: 1;
+    background-color: rgb(246 248 255 / var(--tw-bg-opacity));
   }
 }
 
