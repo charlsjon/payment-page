@@ -230,3 +230,12 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.bottom-wave {
+  background-image: url("/assets/img/background/bottom-wave.svg");
+  width: 100vw;
+  height: 130px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -1320,6 +1320,10 @@ input:checked + .toggle-bg {
   height: 100%;
 }
 
+.h-screen {
+  height: 100vh;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -2240,6 +2244,15 @@ input:checked + .toggle-bg {
   background-size: cover;
 }
 
+.bottom-wave {
+  background-image: url("/assets/img/background/bottom-wave.svg");
+  width: 100vw;
+  height: 130px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .placeholder\:text-center::-moz-placeholder {
   text-align: center;
 }
@@ -2599,16 +2612,12 @@ input:checked + .toggle-bg {
     display: none;
   }
 
-  .sm\:h-unset {
-    height: unset;
+  .sm\:h-full {
+    height: 100%;
   }
 
   .sm\:w-unset {
     width: unset;
-  }
-
-  .sm\:items-center {
-    align-items: center;
   }
 
   .sm\:justify-normal {
@@ -2647,6 +2656,11 @@ input:checked + .toggle-bg {
   .sm\:py-0 {
     padding-top: 0px;
     padding-bottom: 0px;
+  }
+
+  .sm\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .sm\:py-8 {
