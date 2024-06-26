@@ -1320,10 +1320,6 @@ input:checked + .toggle-bg {
   height: 100%;
 }
 
-.h-screen {
-  height: 100vh;
-}
-
 .w-1\/2 {
   width: 50%;
 }
@@ -2253,6 +2249,27 @@ input:checked + .toggle-bg {
   background-size: cover;
 }
 
+@media (min-width: 1024px) {
+  .bottom-wave {
+    height: 262px;
+  }
+}
+
+.animated-background-wave {
+  background-image: url("/assets/img/background/animated-wave.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 639px) {
+  .animated-background-wave {
+    background-image: unset;
+    --tw-bg-opacity: 1;
+    background-color: rgb(246 248 255 / var(--tw-bg-opacity))
+  }
+}
+
 .placeholder\:text-center::-moz-placeholder {
   text-align: center;
 }
@@ -2638,11 +2655,6 @@ input:checked + .toggle-bg {
     border-top-right-radius: 1rem;
   }
 
-  .sm\:bg-platinum {
-    --tw-bg-opacity: 1;
-    background-color: rgb(224 224 224 / var(--tw-bg-opacity));
-  }
-
   .sm\:px-28 {
     padding-left: 7rem;
     padding-right: 7rem;
@@ -2778,8 +2790,20 @@ input:checked + .toggle-bg {
 }
 
 @media (min-width: 1024px) {
+  .lg\:m-0 {
+    margin: 0px;
+  }
+
   .lg\:h-400 {
     height: 48rem;
+  }
+
+  .lg\:h-dvh {
+    height: 100dvh;
+  }
+
+  .lg\:h-unset {
+    height: unset;
   }
 
   .lg\:w-3\/4 {
@@ -2794,9 +2818,24 @@ input:checked + .toggle-bg {
     justify-content: center;
   }
 
+  .lg\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
   .lg\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+
+  .lg\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .lg\:py-6 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 }
 
