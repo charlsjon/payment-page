@@ -253,9 +253,9 @@
   background-size: cover;
 }
 
-@media (max-width: 639px) {
+/* @media (max-width: 639px) {
   .animated-background-wave {
     background-image: unset;
     @apply bg-zircon
   }
-}
+} */
