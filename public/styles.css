@@ -2830,6 +2830,10 @@ input:checked + .toggle-bg {
     justify-content: center;
   }
 
+  .lg\:p-0 {
+    padding: 0px;
+  }
+
   .lg\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -2848,6 +2852,11 @@ input:checked + .toggle-bg {
   .lg\:py-6 {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+  }
+
+  .lg\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
