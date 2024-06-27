@@ -2687,6 +2687,11 @@ input:checked + .toggle-bg {
     padding-bottom: 2rem;
   }
 
+  .sm\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
   .sm\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
