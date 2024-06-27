@@ -8,40 +8,43 @@
   <link rel="stylesheet" href="../public/styles.css">
 </head>
 <body>
-  <main class="flex h-dvh sm:h-full lg:h-dvh w-full animated-background-wave-nosm sm:px-7 sm:py-4 sm:justify-center lg:items-center relative">
-    <div class="h-full lg:h-unset w-full sm:w-unset flex flex-col justify-between sm:justify-normal z-10">
-      <div class="w-full sm:w-unset sm:px-28 lg:px-8 sm:py-8 flex flex-col bg-zircon px-6 py-4 sm:rounded-t-2xl">
-        <div class="w-full flex mb-6 sm:hidden">
-          <i class="fa-solid fa-arrow-left cursor-pointer text-obsidian text-xl hover:text-tealgreen duration-150 my-4"></i>
-        </div>
-        <div class="w-full sm:w-unset flex max-lg:flex-col items-center">
-          <div class="flex items-center">
-            <span class="envelope mb-6 sm:mb-4 lg:m-0"></span>
+  <main class="flex flex-col h-dvh sm:h-full lg:h-dvh w-full animated-background-wave-nosm sm:px-7 sm:py-4 lg:items-center relative">
+    <div class="w-full hidden sm:flex">
+      <i class="fa-solid fa-arrow-left cursor-pointer text-offwhite text-xl md:text-2xl hover:text-obsidian duration-150 mb-4 md:my-4"></i>
+    </div>
+    <div class="h-full flex items-center justify-center">
+      <div class="h-full lg:h-unset w-full sm:w-unset flex flex-col justify-between sm:justify-normal z-10">
+        <div class="w-full sm:w-unset sm:px-28 lg:px-8 sm:py-8 flex flex-col bg-zircon px-6 py-4 sm:rounded-t-2xl">
+          <div class="w-full flex mb-6 sm:hidden">
+            <i class="fa-solid fa-arrow-left cursor-pointer text-obsidian text-xl hover:text-tealgreen duration-150 my-4"></i>
           </div>
-          <div class="flex flex-col lg:px-8">
-            <span class="text-tealgreen text-base sm:text-3xl font-bold text-center mb-8">JUST ONE MORE STEP...</span>
-            <span class="text-sm sm:text-base text-gravel font-normal text-center mb-8">Please enter your email address to confirm it's correct.</span>
-            <div class="w-full border-b border-obsidian mb-4">
-              <input type="email" class="w-full flex bg-transparent text-center placeholder:text-center sm:placeholder:text-base placeholder:text-mediumgrey placeholder:text-sm text-obsidian text-sm sm:text-base border-none focus:ring-1 focus:ring-tealgreen" id="email" placeholder="Enter your Email">
+          <div class="w-full sm:w-unset flex max-lg:flex-col items-center">
+            <div class="flex items-center">
+              <span class="envelope mb-6 sm:mb-4 lg:m-0"></span>
             </div>
-            <div class="w-full border-b border-obsidian mb-16 sm:mb-4">   
-              <input type="email" class="w-full flex bg-transparent text-center placeholder:text-center sm:placeholder:text-base placeholder:text-mediumgrey placeholder:text-sm text-obsidian text-sm sm:text-base border-none focus:ring-1 focus:ring-tealgreen" id="confirmEmail" placeholder="Confirm your Email">
+            <div class="flex flex-col lg:px-8">
+              <span class="text-tealgreen text-base sm:text-3xl font-bold text-center mb-8">JUST ONE MORE STEP...</span>
+              <span class="text-sm sm:text-base text-gravel font-normal text-center mb-8">Please enter your email address to confirm it's correct.</span>
+              <div class="w-full border-b border-obsidian mb-4">
+                <input type="email" class="w-full flex bg-transparent text-center placeholder:text-center sm:placeholder:text-base placeholder:text-mediumgrey placeholder:text-sm text-obsidian text-sm sm:text-base border-none focus:ring-1 focus:ring-tealgreen" id="email" placeholder="Enter your Email">
+              </div>
+              <div class="w-full border-b border-obsidian mb-16 sm:mb-4">   
+                <input type="email" class="w-full flex bg-transparent text-center placeholder:text-center sm:placeholder:text-base placeholder:text-mediumgrey placeholder:text-sm text-obsidian text-sm sm:text-base border-none focus:ring-1 focus:ring-tealgreen" id="confirmEmail" placeholder="Confirm your Email">
+              </div>
+              <button class="w-full disabled:bg-lightgrey enabled:bg-tealgreen py-2 text-center text-sm sm:text-base disabled:text-obsidian enabled:text-offwhite rounded-md hover:bg-green-900 ease-in-out duration-300" id="submitButton" disabled>CONTINUE</button>
             </div>
-            <button class="w-full disabled:bg-lightgrey enabled:bg-tealgreen py-2 text-center text-sm sm:text-base disabled:text-obsidian enabled:text-offwhite rounded-md hover:bg-green-900 ease-in-out duration-300" id="submitButton" disabled>CONTINUE</button>
           </div>
         </div>
-      </div>
-      <div class="w-full sm:w-unset flex justify-center sm:justify-normal bg-nero py-4 sm:py-0 sm:rounded-b-2xl">
-        <div class="bg-charcoalgrey p-4 rounded-es-2xl hidden sm:flex lg:px-12 lg:py-6">
-          <span class="zumumu-icon-white"></span>
-        </div>
-        <div class="w-full flex justify-center items-center">
-          <p class="text-xs sm:text-base text-offwhite text-center">If problem persist you can email us in <strong class="cursor-pointer">test@developers.ph</strong></p>
+        <div class="w-full sm:w-unset flex justify-center sm:justify-normal bg-nero py-4 sm:py-0 sm:rounded-b-2xl">
+          <div class="bg-charcoalgrey p-4 rounded-es-2xl hidden sm:flex lg:px-12 lg:py-6">
+            <span class="zumumu-icon-white"></span>
+          </div>
+          <div class="w-full flex justify-center items-center">
+            <p class="text-xs sm:text-base text-offwhite text-center">If problem persist you can email us in <strong class="cursor-pointer">test@developers.ph</strong></p>
+          </div>
         </div>
       </div>
     </div>
-
-    <!-- <img src="/assets/img/background/animated-wave.svg" class="absolute h-full w-full sm:flex top-0 left-0 hidden"> -->
   </main>
 </body>
 <script src="../assets/js/email-confirmation.js"></script>

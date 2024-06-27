@@ -2385,6 +2385,11 @@ input:checked + .toggle-bg {
   color: rgb(20 103 88 / var(--tw-text-opacity));
 }
 
+.hover\:text-obsidian:hover {
+  --tw-text-opacity: 1;
+  color: rgb(11 18 21 / var(--tw-text-opacity));
+}
+
 .focus\:border-none:focus {
   border-style: none;
 }
