@@ -156,7 +156,7 @@
   @apply w-10
 }
 
-.expanded {
+.extend {
   @apply border border-nero w-72
 }
 

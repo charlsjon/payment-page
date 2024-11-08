@@ -24,7 +24,9 @@ module.exports = {
         zircon: '#F6F8FF',
         aquamarine: '#5EFFE2',
         bluehosta: '#6FC5B6',
-        charcoalgrey: '#3F3F3F'
+        charcoalgrey: '#3F3F3F',
+        mercury: '#E7E7E7',
+        coolgrey: '#8FA09D'
       },
       rotate: {
         '10': '10deg'

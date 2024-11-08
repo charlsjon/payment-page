@@ -1,3 +1,12 @@
+function offLoader() {
+  closeLoader = setTimeout(showPage, 3000)
+}
+
+const loader = document.getElementById('loader')
+function showPage() {
+  loader.style.display = "none"
+}
+
 document.addEventListener('DOMContentLoaded', (event) => {
   const email = document.getElementById('email');
   const confirmEmail = document.getElementById('confirmEmail');

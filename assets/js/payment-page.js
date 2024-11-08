@@ -1,3 +1,12 @@
+function offLoader() {
+  closeLoader = setTimeout(showPage, 3000)
+}
+
+const loader = document.getElementById('loader')
+function showPage() {
+  loader.style.display = "none"
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   let descriptionContainer = document.querySelectorAll(".description-container")
   descriptionContainer.forEach(description => {
@@ -94,5 +103,3 @@ function handlePlanClick(event) {
     }
   }
 }
-
-

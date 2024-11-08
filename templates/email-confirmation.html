@@ -7,7 +7,10 @@
   <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../public/styles.css">
 </head>
-<body>
+<body onload="offLoader()">
+  <div class="absolute h-dvh w-dvw flex justify-center items-center left-0 top-0 backdrop-blur-sm z-50" id="loader">
+    <div class="size-24 border-8 border-coolgrey border-t-tealgreen rounded-full animate-spin"></div>
+  </div>
   <main class="flex flex-col h-dvh sm:h-full lg:h-dvh w-full animated-background-wave-nosm sm:px-16 sm:py-4 lg:items-center relative">
     <div class="w-full hidden sm:flex sm:py-4">
       <i class="fa-solid fa-arrow-left cursor-pointer text-offwhite text-xl md:text-2xl hover:text-obsidian duration-150 mb-4 md:my-4"></i>

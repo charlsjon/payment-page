@@ -1,3 +1,12 @@
+function offLoader() {
+  closeLoader = setTimeout(showPage, 3000)
+}
+
+const loader = document.getElementById('loader')
+function showPage() {
+  loader.style.display = "none"
+}
+
 document.addEventListener('DOMContentLoaded', ()=> {
 
   const scrollableElement = document.getElementById('scrollable');
@@ -23,14 +32,14 @@ document.addEventListener('DOMContentLoaded', ()=> {
   const searchBar = document.getElementById('search-bar');
   const findCounter = document.getElementById('find-counter');
   function expandSearchBar() {
-    searchBar.classList.add('expanded');
+    searchBar.classList.add('extend');
     searchBar.classList.remove('search-bar');
     findCounter.classList.add('flex');
     findCounter.classList.remove('hidden');
     searchBar.focus();
   }
   function collapseSearchBar() {
-    searchBar.classList.remove('expanded');
+    searchBar.classList.remove('extend');
     searchBar.classList.add('search-bar');
     findCounter.classList.remove('flex');
     findCounter.classList.add('hidden');
